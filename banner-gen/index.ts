@@ -43,6 +43,7 @@ await sharp({
   },
 })
   .composite([{ input: logoBuffer, left: logoLeft, top: 0 }])
+  .removeAlpha()
   .png()
   .toFile(OUTPUT_FILE);
 
